@@ -1,0 +1,107 @@
+{{> nav-bar nav}}
+{{> hero hero}}
+<button style="margin: 20px 15px 20px 20px;" class="btn">
+  <a style="margin-bottom: auto; margin-top: auto;" href="/dashboard/itinerary">
+    &larr; back to your profile
+  </a>
+</button>
+{{#if blogCreate}}
+<section class="froala">
+  <h2>Edit blog post</h2>
+  <form target="/dashboard/" name="blog-form" class="blog-form">
+    <textarea id="example" name="content"></textarea>
+
+    <aside class="blog-inputs" style="flex-wrap: wrap;">
+      <div>
+
+        <label for="title">Provide title of the blog post</label>
+        <input type="text" name="title" id="titleInput" placeholder="Provide title of blog" required />
+        <label for="thumbnail">Choose blog thumbnail</label>
+        <input type="file" id="thumbnail" name="thumbnail" accept="image/png, image/jpeg" required />
+      </div>
+
+      <div>
+        <label for="city">Provide city blog post is about</label>
+        <input type="text" name="city" id="cityInput" placeholder="Provide city of blog" required />
+        <div class="flex-col">
+          <label for="category">Choose category type of blog</label>
+          <select id="catSelect" for="category" required>
+            <option>Stay</option>
+            <option>Taste</option>
+            <option>Vibe</option>
+            <option>Experience</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="flex-col" style="flex-wrap: wrap; width: 279px;">
+        <label for="itinerary-select">Choose itinerary blog is about</label>
+        <select id="itinerary-select" style="width: 100%;" for="itinerary-select" required>
+          {{#if itineraries.length}}
+          {{#each itineraries as |itinerary|}}
+          <option data-id="{{itinerary.id}}">{{itinerary.title}}</option>
+          {{/each}}
+          {{else}}
+          <option data-id="no-data">No itineraries!</option>
+          {{/if}}
+        </select>
+      </div>
+    </aside>
+    <div class="edit-buttons">
+      <button type="button" id="saveButton" class="edit-link btn submit-blog">Confirm</button>
+      <button type="button" id="delete-button" class="edit-link btn submit-blog">Delete</button>
+    </div>
+  </form>
+</section>
+<iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+{{else}}
+<section class="itinerary">
+  {{> itinerary-upload}}
+</section>
+{{/if}}
+
+{{#if blogCreate}}
+{{!-- comment and like functionality only for logged in users --}}
+{{#if loggedIn}}
+<form class="comment-form">
+  <textarea id="comment-text"></textarea>
+  <button id="addComment">add comment</button>
+  <button type="button" class="upvote-btn"><i class="fa-solid fa-thumbs-up"></i>like</button>
+</form>
+{{/if}}
+{{!-- generate comment feed of post --}}
+{{> comments post.comments}}
+{{/if}}
+{{> contact footer}}
+{{> uparrow}}
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+
+<script type='text/javascript'
+  src='https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/3.2.6/js/plugins/image.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/plugins/image.min.js"></script>
+<!-- Include TUI and Fabric JS. -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.6.7/fabric.min.js"></script>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/tui-code-snippet@1.4.0/dist/tui-code-snippet.min.js"></script>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/tui-image-editor@3.2.2/dist/tui-image-editor.min.js"></script>
+
+<!-- Include Froala TUI plugin JS -->
+<script src="https://cdn.jsdelivr.net/npm/froala-editor@3.1.0/js/third_party/image_tui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/plugins/save.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/plugins/draggable.min.js"></script>
+{{#if blogCreate}}
+<script src="/public/js/account-controls/edit-post.js"></script>
+<script src="/public/js/account-controls/delete-post.js"></script>
+<script src="/public/js/blog/comment.js"></script>
+<script src="/public/js/account-controls/category-options.js"></script>
+{{else}}
+<script src="/public/js/account-controls/edit-itinerary.js"></script>
+{{/if}}
+
+{{!--
+<script src="/public/js/blog/google-map.js"></script>
+<script defer src="https://maps.googleapis.com/maps/api/js?key={{gmaps}}&callback=addMaps&v=weekly" defer></script> --}}

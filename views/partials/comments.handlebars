@@ -1,0 +1,21 @@
+<div class="comments" style="margin-top: 20px;">
+  <h3 class="comments-title">Comments</h3>
+  {{!-- loops through comments array which contains comment objects --}}
+  {{!-- hense each element is refered to as this --}}
+  {{#if this}}
+  <div class="comment-col">
+    {{#each this}}
+    <section class="comment">
+      <div class="comment-meta">
+        {{user.username}} on {{format_date created_at}}
+      </div>
+      <div class="text">
+        {{comment_text}}
+      </div>
+    </section>
+    {{/each}}
+  </div>
+  {{else}}
+  <h2 style="margin-top: 10px;">No comments ...</h2>
+  {{/if}}
+</div>

@@ -1,0 +1,59 @@
+{{> nav-bar nav}}
+{{#if noData}}
+<h2 class="noData">No itineraries posted yet...</h2>
+{{else}}
+
+<div class="legendary-gallery">
+  <div class="owl-carousel owl-carousel-itineraries-hero">
+    {{#each posts as |post|}}
+    <div class="testimonial testimonial-2">
+      {{> itinerary-hero post}}
+      </li>
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+<div style="display: flex; align-items:center; justify-content:center;">
+  <button style="margin: 20px 15px 20px 20px;" class="btn">
+    <a style="margin-bottom: auto; margin-top: auto;" href="/itinerary">
+      &larr; back to the globe
+    </a>
+
+  </button>
+  <a style="margin-right: 15px; margin-bottom: auto; margin-top: auto;" href="/itinerary">
+    <img src="https://media.tenor.com/CKA21kCjN3QAAAAd/ali-yalniz-world-is-spinning.gif" id="content" width="49"
+      height="49">
+  </a>
+</div>
+
+<div class="itinerary-city-div">
+  <h2 class="itinerary-city-h2">Recommended Itineraries</h2>
+</div>
+
+<div class="legendary-gallery">
+  <div class="owl-carousel owl-carousel-itineraries">
+    {{#each posts as |post|}}
+    <div class="testimonial testimonial-2">
+        {{> itinerary post}}
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+<div class="itinerary-city-div">
+  <h2 id="itinerary-feed-h2" class="itinerary-city-h2">All Itineraries</h2>
+</div>
+{{> category-nav}}
+<section class="myPostContainer">
+  <ol class="itinerary-feed-ol">
+    {{#each posts as |post|}}
+      {{> itinerary-feed post}}
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+{{> contact footer}}
+
+<script src="/public/js/itinerary/category-filters.js"></script>

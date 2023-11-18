@@ -1,0 +1,39 @@
+{{> nav-bar nav}}
+{{> hero hero}}
+{{!-- tech tree image --}}
+{{!-- <div class="flex">
+  <img class="tech-tree" src="/public/assets/tech-tree.png" alt="A tree with leaves of various technologies">
+</div> --}}
+
+{{!-- login form --}}
+<div style="margin-top: 35px;">
+  <h4 style=" color:black; font-size: 3rem; text-align: center;">
+    login
+  </h4>
+  <form class="input-style login-form">
+    <div class="credential-inputs">
+      <input class="requiredField-c name" type="email" id="email-login" placeholder="Email" required />
+    </div>
+    <div class="credential-inputs">
+      <input class="requiredField-c name" type="password" id="password-login" placeholder="Password" required />
+    </div>
+
+    <!-- button start -->
+    <div class="more-wraper-center more-wraper-center-form-2">
+      <div class="more-button-bg-center more-button-bg-center-dark more-button-bg-center-dark-close more-button-circle">
+      </div>
+      <div id="mce-responses" class="clear">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+      </div>
+      <div class="more-button-txt-center more-button-txt-center-close">
+        <button type="submit">
+          <span input value="Subscribe" name="subscribe" id="mc-embedded-subscribe">Log In</span>
+        </button>
+      </div>
+    </div>
+  </form>
+
+{{> contact footer}}
+{{> uparrow}}
+<script src="/public/js/account-controls/login-signup.js"></script>

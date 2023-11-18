@@ -1,0 +1,138 @@
+{{> nav-bar nav}}
+{{!-- <menu class="post-menu">
+  <li>
+    <a href="/dashboard/itinerary">
+      <button value="true" data-class=".itinerary" id="itinerary-btn" class="btn post-option">
+        create itinerary
+      </button>
+    </a>
+  </li>
+  <li>
+    <a href="/dashboard">
+      <button value="false" data-class=".froala" id="blog-btn" class="btn post-option">
+        create blog post
+      </button>
+    </a>
+  </li>
+</menu> --}}
+{{#if blogCreate}}
+<section class="froala">
+  <h2>Create a new blog post</h2>
+  <form target="/dashboard/" name="blog-form" class="blog-form">
+    <textarea id="example" name="content"></textarea>
+
+    <aside class="blog-inputs" style="flex-wrap: wrap;">
+      <div>
+        <label for="title">Provide title of the blog post</label>
+        <input type="text" name="title" id="titleInput" placeholder="Provide title of blog" required />
+        <label for="thumbnail">Choose blog thumbnail</label>
+        <input type="file" id="thumbnail" name="thumbnail" accept="image/png, image/jpeg" required />
+      </div>
+
+      <div>
+        <label for="city">Provide city blog post is about</label>
+        <input type="text" name="city" id="cityInput" placeholder="Provide city of blog" required />
+        <div class="flex-col">
+          <label for="category">Choose category type of blog</label>
+          <select id="catSelect" for="category" required>
+          </select>
+        </div>
+      </div>
+
+      <div class="flex-col" style="flex-wrap: wrap; width: 279px;">
+        <label for="itinerary-select">Choose itinerary blog is about</label>
+        <select id="itinerary-select" style="width: 100%;" for="itinerary-select" required>
+          {{#if itineraries.length}}
+          {{#each itineraries as |itinerary|}}
+          <option data-id="{{itinerary.id}}">{{itinerary.title}}</option>
+          {{/each}}
+          {{else}}
+          <option data-id="no-data">No itineraries!</option>
+          {{/if}}
+        </select>
+      </div>
+    </aside>
+
+    <button id="saveButton" type="button" class="edit-link btn submit-blog">Submit Blog</button>
+  </form>
+</section>
+<iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+{{else}}
+<button style="display: flex;" value="true" data-class=".itinerary" id="itinerary-btn" class="btn post-option">
+  <ion-icon style="font-size:20px; margin-top:auto; margin-bottom:6px"
+  class="fa-solid fa-plus" name="chevron-down-outline"></ion-icon>
+  <p>create itinerary</p> 
+</button>
+<section class="itinerary hide">
+  {{> itinerary-upload}}
+</section>
+{{/if}}
+
+{{#if posts.length}}
+<section class="myPostsContainer">
+  {{#if blogCreate}}
+  <h2>Your Posts</h2>
+  {{else}}
+  <h2>Your Itineraries</h2>
+  {{/if}}
+  <ol class="myPostsFeed">
+    {{!-- for each post generate a post-info partial with post data --}}
+    {{#if blogCreate}}
+    {{#each posts as |post|}}
+    <li class="dashboard-blog-li">
+      {{> post-info post}}
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link btn">Edit post</a>
+    </li>
+    {{/each}}
+    {{else}}
+    {{#each posts as |post|}}
+    <li class="dashboard-blog-li">
+      {{> itinerary-dashboard post}}
+      <a href="/dashboard/itinerary/edit/{{post.id}}" class="edit-link btn">Edit post</a>
+    </li>
+    {{/each}}
+    {{/if}}
+  </ol>
+</section>
+{{else}}
+<section class="myPostsContainer">
+  {{#if blogCreate}}
+  <h2>Your Posts:</h2>
+  <h2>No blog posts yet!</h2>
+  {{else}}
+  <h2>Your itineraries:</h2>
+  <h2>No itineraries made yet!</h2>
+  {{/if}}
+</section>
+{{/if}}
+{{> contact footer}}
+{{> uparrow}}
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+<script type='text/javascript'
+  src='https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/3.2.6/js/plugins/image.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/plugins/image.min.js"></script>
+<!-- Include TUI and Fabric JS. -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.6.7/fabric.min.js"></script>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/tui-code-snippet@1.4.0/dist/tui-code-snippet.min.js"></script>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/tui-image-editor@3.2.2/dist/tui-image-editor.min.js"></script>
+
+<!-- Include Froala TUI plugin JS -->
+<script src="https://cdn.jsdelivr.net/npm/froala-editor@3.1.0/js/third_party/image_tui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/plugins/save.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/plugins/draggable.min.js"></script>
+{{#if blogCreate}}
+<script src="/public/js/account-controls/create-post.js"></script>
+<script src="/public/js/account-controls/category-options.js"></script>
+{{else}}
+<script src="/public/js/account-controls/create-itinerary.js"></script>
+{{/if}}
+<script src="/public/js/account-controls/post-menu.js"></script>
+{{!--
+<script src="/public/js/blog/google-map.js"></script>
+<script defer src="https://maps.googleapis.com/maps/api/js?key={{gmaps}}&callback=addMaps&v=weekly" defer></script> --}}

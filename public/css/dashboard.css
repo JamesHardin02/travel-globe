@@ -1,0 +1,171 @@
+.myPostsContainer {
+  margin-top: 50px;
+}
+
+.myPostsFeed {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.myPostsFeed li {
+  margin: 5px;
+}
+
+.froala {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.froala>h2 {
+  margin-bottom: 13px;
+}
+
+.edit-link,
+.meta>a {
+  color: black;
+  align-self: flex-end;
+  font-size: 14px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: space-around;
+}
+
+.backToDashboard {
+  margin-top: 25px;
+}
+
+.blog-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-blog {
+  align-self: center;
+  margin-top: 10px;
+}
+
+section.froala>form>aside>div>input {
+  width: auto;
+}
+
+.dashboard-blog-li {
+  display: flex;
+  flex-direction: column;
+}
+
+a:visited {
+  color: black;
+}
+
+.edit-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+#delete-button,
+.delete-section-btn {
+  color: black;
+  background-color: rgba(255, 0, 0, .2);
+  border-color: red;
+}
+
+.post-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-option {
+  margin-top: 15px;
+}
+
+.active-btn {
+  background-color: rgb(218, 218, 218);
+}
+
+.hidden {
+  display: none;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.add-cat-menu {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.add-cat-menu>h2 {
+  width: fit-content;
+  border-bottom: 1px solid black;
+}
+
+.image-input {
+  margin: 20px auto 30px auto;
+  width: 200px;
+}
+
+.fr-box .fr-sticky-on {
+  position: static;
+}
+
+.iti-section-btn ion-icon {
+  font-size: 16px;
+}
+
+#nation-select {
+  height: fit-content;
+  width: 315px;
+}
+
+#tag-check {
+  margin: auto;
+}
+
+@media (min-width: 528px) {
+
+  .post-menu {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .post-option {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .blog-inputs {
+    display: flex;
+    justify-content: center;
+  }
+
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 802px) {
+  .add-cat-menu {
+    flex-direction: row;
+    height: auto;
+    width: 800px;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-top: 20px
+  }
+}

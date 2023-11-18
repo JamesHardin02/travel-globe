@@ -1,0 +1,37 @@
+{{> nav-bar nav}}
+{{> hero hero}}
+{{> city-blog-search}}
+{{> category-nav}}
+{{#if noData}}
+<h2 class="noData">No posts for this city yet...</h2>
+{{else}}
+{{#if noPosts}}
+<section class="myPostsContainer">
+  <h2>No blog posts yet!</h2>
+</section>
+{{else}}
+{{#each posts as |post|}}
+<div class="itinerary-city-div">
+  <h2 class="itinerary-city-h2">{{check_city @key}}</h2>
+</div>
+
+<div class="legendary-gallery">
+  <!-- testimonials start -->
+  <div class="owl-carousel owl-carousel-itineraries">
+    {{!-- for each post generate a post-info partial with post data --}}
+    {{#each post as |blog|}}
+    <div class="testimonial testimonial-2">
+      {{> blog blog}}
+      </li>
+    </div>
+    {{/each}}
+  </div>
+</div>
+<!-- testimonials quote start -->
+{{/each}}
+{{/if}}
+{{/if}}
+{{> contact footer}}
+{{> uparrow}}
+<script src="/public/js/blog/blog-search.js"></script>
+<script src="/public/js/blog/blog-nav.js"></script>

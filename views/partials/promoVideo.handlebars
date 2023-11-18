@@ -1,0 +1,71 @@
+<!-- video testimonials start -->
+<div id="video-testimonials" class="section-all">
+  <!-- container start -->
+  <div class="container-fluid">
+    <!-- row start -->
+    <div class="row">
+      <!-- parallax wrapper start -->
+      <div class="parallax parallax-all">
+        <!-- HTML5 video URL start -->
+        <video playsinline autoplay loop muted>
+          <source src="{{this.video}}" type="video/mp4">
+        </video>
+        <!-- HTML5 video URL end -->
+        <!-- parallax overlay start -->
+        <div class="parallax-overlay-video-testimonials"></div>
+        <!-- parallax overlay end -->
+        <!-- parallax content start -->
+        <div class="parallax-content">
+          <!-- line start -->
+          <div class="the-line the-line-light"></div>
+          <!-- line end -->
+          <!-- divider start -->
+          <div class="divider-l"></div>
+          <!-- divider end -->
+          <!-- testimonials start -->
+          <div class="owl-carousel owl-carousel-quotes">
+            <!-- testimonials quote start -->
+            <div class="testimonial testimonial-2">
+              <div class="inner">
+                <div class="quote">
+                  <blockquote class="quote-inner">
+                    {{this.content}}
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+            <!-- testimonials quote end -->
+          </div>
+          <!-- testimonials end -->
+          <!-- divider start -->
+          <div class="divider-l"></div>
+          <!-- divider end -->
+          {{#if this.noAccessBtn}}
+          {{else}}
+          <!-- button start -->
+          <div class="more-wraper-center">
+            <a href="/contact">
+              <div class="more-button-bg-center more-button-circle"></div>
+              <div class="more-button-txt-center">
+                <span>get early access</span>
+              </div>
+            </a>
+          </div>
+          <!-- button end -->
+          {{/if}}
+          <!-- divider start -->
+          <div class="divider-l"></div>
+          <!-- divider end -->
+          <!-- line start -->
+          <div class="the-line the-line-light"></div>
+          <!-- line end -->
+        </div>
+        <!-- parallax content end -->
+      </div>
+      <!-- parallax wrapper end -->
+    </div>
+    <!-- row end -->
+  </div>
+  <!-- container end -->
+</div>
+<!-- video testimonials end -->

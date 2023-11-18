@@ -1,0 +1,661 @@
+.margin-vertical {
+  margin: 20px auto;
+}
+
+.margin-top {
+  margin-top: 20px;
+}
+
+.margin-bottom {
+  margin-bottom: 20px;
+}
+
+.nav-alter {
+  flex-wrap: wrap;
+}
+
+.navbar {
+  margin: 0px;
+  height: 100px;
+}
+
+.card {
+  border-bottom: 1px solid brown;
+  max-width: 650px;
+  margin: 20px auto;
+}
+
+.card-body {
+  padding-bottom: 25px;
+}
+
+.collapse-btn {
+  color: black;
+  font-weight: 400;
+  font-size: 20px;
+  border-radius: 0;
+  text-decoration: none;
+}
+
+.collapse-btn ion-icon {
+  color: #ee861e;
+  font-size: 32px;
+}
+
+.collapse-btn:hover {
+  color: brown;
+  text-decoration: none;
+}
+
+.collapse-btn {
+  font-size: 25px;
+}
+
+.collapse-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.collapse-content h2 {
+  font-size: 20px;
+}
+
+.ptag {
+  max-width: 700px;
+  margin: auto;
+}
+
+h2.highlight {
+  margin: auto;
+  width: fit-content;
+  margin-top: 25px;
+}
+
+.itinerary-text {
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+}
+
+#palace-img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.phone-figure {
+  height: 260px;
+  top: 57px;
+  width: 150px;
+  height: 300px;
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  -webkit-border-radius: 0 50px 50px 0;
+  -moz-border-radius: 0 50px 50px 0;
+  -ms-border-radius: 0 50px 50px 0;
+  -o-border-radius: 0 50px 50px 0;
+  border-radius: 0 50px 50px 0;
+  z-index: 3;
+}
+
+#tailored-review-phone {
+  background-size: 701px;
+}
+
+#third-collapse-phone {
+  background-size: 795px;
+}
+
+/* ----------------- IMAGE CAROUSEL + hero banner ----------------- */
+.gallery-figure {
+  position: relative;
+}
+
+.gallery-figure img {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
+
+.hero-banner {
+  height: 110px;
+  width: 100%;
+}
+
+.gallery-figure h2,
+.gallery-figure p,
+.hero-title {
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.9em black, 0.5px 0.5px 0.5px black;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -67%);
+}
+
+.gallery-h2,
+.hero-title {
+  top: 50%;
+}
+
+.gallery-caption {
+  width: 225px;
+  top: 85%;
+}
+
+.hero-title h1 {
+  display: none;
+}
+
+#title-text {
+  display: none;
+}
+
+#light-hero-logo {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  left: 4%;
+  top: 25%;
+}
+
+/* .arrow-container {
+  position: relative;
+  z-index: 3;
+  width: 35px;
+  height: 35px;
+  border-radius: 70px;
+  background-color: #ee861e;
+}
+
+.arrow-left {
+  position: absolute;
+  top: 50%;
+}
+
+.arrow-right {
+  position: absolute;
+  top: 50%;
+  margin-left: auto;
+  left: 50%;
+}
+
+.arrow-style {
+  color: black;
+  translate: 90% 35%;
+} */
+
+/* ----------------- END OF IMAGE CAROUSEL ----------------- */
+.gallery-figure-main h2 {
+  transform: translate(-50%, 10%);
+}
+
+.gallery-figure-main p {
+  transform: translate(-50%, 43%);
+  width: 200px;
+}
+
+#samarkand-p {
+  transform: translate(-50%, 27%);
+}
+
+#japan-boat-p {
+  transform: translate(-50%, 25%);
+}
+
+#find-taste {
+  top: 16px;
+}
+
+#find-vibe {
+  color: black;
+  text-shadow: none;
+}
+
+@media (min-width: 500px) {
+  .gallery-figure img {
+    width: 500px;
+    height: 370px;
+  }
+
+  .gallery-caption {
+    top: 85%;
+  }
+
+  /* .arrow-container {
+    width: 40px;
+    height: 40px;
+  }
+
+  .arrow-left {
+    translate: 5px 240px;
+  }
+
+  .arrow-right {
+    translate: 0px 205px;
+    margin-left: auto;
+    margin-right: 5px;
+  }
+
+  .arrow-style {
+    color: black;
+    translate: 100% 55%;
+  } */
+
+  .hero-banner {
+    height: 150px;
+  }
+
+  #light-hero-logo {
+    width: 110px;
+    height: 110px;
+  }
+
+  #samarkand-img {
+    height: 650px;
+    object-fit: contain;
+  }
+
+  #palace-img {
+    height: 350px;
+    object-fit: cover;
+  }
+
+  .gallery-figure-main h2 {
+    transform: translate(-50%, 10%);
+  }
+
+  .gallery-figure-main p {
+    transform: translate(-50%, 43%);
+    width: 200px;
+  }
+
+  #samarkand-p {
+    transform: translate(-50%, 44%);
+  }
+
+  #samarkand-h2 {
+    transform: translate(-50%, 24%);
+  }
+
+  #find-vibe-bdr {
+    border-color: white;
+    box-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.9em black, 0.5px 0.5px 0.5px black;
+  }
+
+  #find-vibe {
+    z-index: 2;
+    top: -195px;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.9em black, 0.5px 0.5px 0.5px black;
+  }
+
+  #japan-boat-h2 {
+    transform: translate(-50%, 55%);
+  }
+
+  #japan-boat-p {
+    transform: translate(-50%, 57%);
+    width: 400px;
+  }
+}
+
+@media (min-width: 650px) {
+  /* .arrow-left {
+    display: none;
+  }
+
+  .arrow-right {
+    display: none;
+  } */
+
+  .legendary-gallery .cat-figure {
+    padding: 0px;
+  }
+
+  .legendary-gallery .cat-figure:last-child {
+    margin: 0px;
+  }
+
+  .cat-figure img {
+    width: 600px;
+    height: 400px;
+    object-fit: contain;
+  }
+
+  .hero-banner {
+    height: 160px;
+  }
+
+  #light-hero-logo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .collapse-content {
+    flex-direction: row;
+  }
+
+  .collapse-content div,
+  .collapse-content h2 {
+    padding-right: 25px;
+  }
+
+  .padding-zero div,
+  .padding-zero div a div,
+  .padding-zero div a div span {
+    padding: 0px;
+  }
+
+  .collapse-content-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .collapse-content-reverse div,
+  .collapse-content-reverse h2 {
+    padding-left: 25px;
+  }
+
+  .collapse-content-reverse {
+    padding: 10px;
+  }
+
+  .collapse-content div {
+    flex: 1;
+  }
+
+  #tailored-review-phone,
+  #third-collapse-phone {
+    background-size: 950px;
+  }
+
+  #samarkand-h2 {
+    transform: translate(-50%, 24%);
+  }
+
+  #find-vibe {
+    z-index: 2;
+    top: -191px;
+  }
+
+  #japan-boat-h2 {
+    transform: translate(-50%, 43%);
+  }
+
+  #japan-boat-p {
+    transform: translate(-50%, 60%);
+    width: 295px;
+  }
+}
+
+@media (min-width: 769px) {
+  #find-vibe {
+    z-index: 2;
+    top: -170px;
+  }
+
+  #find-taste {
+    top: 30px;
+  }
+}
+
+@media (min-width: 850px) {
+  .gallery-figure img {
+    width: 550px;
+    height: 350px;
+  }
+
+  .collapse-content-reverse {
+    padding: 0px;
+  }
+
+  .flex-wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .flex-wrap section,
+  .flex-wrap section img,
+  .flex-wrap section p,
+  .flex-wrap section h2 {
+    height: auto;
+    width: 400px;
+    margin: 0px;
+  }
+
+  .flex-wrap section p {
+    width: 293px;
+  }
+
+  .flex-wrap section {
+    margin: 0px;
+    width: 50%;
+  }
+
+  .flex-wrap section img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .gallery-figure-main h2 {
+    transform: translate(-50%, 0%);
+  }
+
+  .gallery-figure-main p {
+    transform: translate(-50%, 86%);
+    width: 200px;
+  }
+
+  #samarkand-p {
+    transform: translate(-50%, 27%);
+  }
+
+  #samarkand-img {
+    height: auto;
+  }
+
+  #find-taste {
+    top: -5px;
+  }
+
+  #find-vibe {
+    z-index: 2;
+    top: -150px;
+  }
+
+  #find-vibe-bdr {
+    border-color: white;
+    box-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.9em black, 0.5px 0.5px 0.5px black;
+  }
+
+  #find-vibe {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.9em black, 0.5px 0.5px 0.5px black;
+  }
+
+  #find-experience {
+    top: -60px;
+  }
+
+  .move-find-up {
+    top: -43px
+  }
+
+  .gallery-caption {
+    top: 82%;
+  }
+}
+
+@media (min-width: 875px) {
+  .hero-banner {
+    height: 190px;
+  }
+
+  .hero-title h1 {
+    display: block;
+    width: 280px;
+  }
+
+  #light-hero-logo {
+    left: -38%;
+    top: 39%;
+  }
+
+  .hero-video-lg {
+    position: absolute;
+    width: calc(50% + 130px);
+    height: calc(100% + 60px);
+    top: 65%;
+    -webkit-transform: translateY(-59%);
+    transform: translateY(-59%);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+    -webkit-border-radius: 0 32px 32px 0;
+    -moz-border-radius: 0 32px 32px 0;
+    -ms-border-radius: 0 32px 32px 0;
+    -o-border-radius: 0 32px 32px 0;
+    border-radius: 0 32px 32px 0;
+    z-index: 1;
+  }
+
+  #hero-title-space {
+    padding-left: 65px;
+  }
+
+  #transparent-bg-floated {
+    position: absolute;
+    height: 150px;
+    width: 318px;
+    top: 138px;
+    margin-left: 278px;
+    padding-bottom: 5px;
+    z-index: 1;
+  }
+
+  #title-text {
+    display: block;
+    width: 100%;
+    height: 100px;
+    font-size: 13px;
+    font-weight: 700;
+    color: black;
+    text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.9em white, 0.5px 0.5px 0.5px white;
+  }
+
+  .hero-title h1 {
+    text-shadow: 0.5px 0.5px 0.5px white, 0 0 0.2px white, 0 0 0.2px white, 0.2px 0.2px 0.2px white;
+  }
+
+  .hero-title {
+    position: absolute;
+    z-index: 4;
+    top: 35px;
+    width: 326px;
+    margin-left: 174px;
+    color: rgb(32, 31, 31);
+    text-shadow: none;
+    font-size: 35px;
+    font-weight: 800;
+    text-align: center;
+    background-color: rgb(255 156 42 / 53%);
+    border-radius: 30px;
+    padding: 17px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .accordion {
+    margin-top: 50px;
+  }
+
+  .move-find-up {
+    top: -23px
+  }
+
+  .gallery-caption {
+    top: 78%;
+  }
+}
+
+@media (min-width: 940px) {
+  #hero-title-space {
+    padding-left: 0px;
+  }
+
+  #transparent-bg-floated {
+    margin-left: 308px;
+  }
+
+  .hero-title h1 {
+    text-align: center;
+    padding-bottom: 12px;
+    border-bottom: 3px double rgb(255 156 42);
+  }
+
+  .hero-title {
+    width: fit-content;
+    padding-top: 0px;
+    margin-left: 305px;
+    font-size: 33px;
+    font-weight: 800;
+    text-align: center;
+    background-color: rgba(237, 137, 22, 0);
+  }
+
+  #title-text {
+    font-size: 14.5px;
+  }
+}
+
+#japan-boat-img {
+  margin-top: 20px;
+}
+
+@media (min-width: 994px) {
+  .destination-h2 {
+    width: 700px;
+  }
+
+  .flex-wrap section {
+    margin: 0px;
+    width: 40%;
+  }
+}
+
+@media (min-width: 1100px) {
+  .gallery-figure img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .gallery-caption {
+    top: 70%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-title {
+    margin-left: 385px;
+  }
+
+  #transparent-bg-floated {
+    margin-left: 386px;
+    width: 368px;
+  }
+
+  .gallery-caption {
+    top: 73%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #light-hero-logo {
+    left: -41%;
+  }
+}

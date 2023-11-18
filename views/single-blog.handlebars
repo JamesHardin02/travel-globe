@@ -1,0 +1,27 @@
+{{> nav-bar nav}}
+{{> hero hero}}
+{{> city-blog-search}}
+{{> category-nav}}
+{{!-- generate a post-info partial with post data --}}
+{{> post-info post}}
+
+{{!-- comment and like functionality only for logged in users --}}
+{{#if loggedIn}}
+<form class="comment-form">
+  <textarea id="comment-text"></textarea>
+  <button id="addComment">add comment</button>
+  <button type="button" class="upvote-btn"><i class="fa-solid fa-thumbs-up"></i>like</button>
+</form>
+{{/if}}
+
+{{!-- generate a comment partials with comment data --}}
+{{> comments post.comments}}
+
+{{> contact footer}}
+{{> uparrow}}
+<script src="/public/js/blog/blog-search.js"></script>
+<script src="/public/js/blog/blog-nav.js"></script>
+<script src="/public/js/blog/comment.js"></script>
+{{!--
+<script src="/public/js/blog/google-map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{gmaps}}&callback=addMap&v=weekly" defer></script> --}}

@@ -1,0 +1,42 @@
+{{#if blogFeed}}
+<article class="blog-post hover">
+  <a href="/blog/post/{{id}}">
+    <h3 class="blog-title-feed" style="{{title_margin title}}">
+      {{title}}
+    </h3>
+    <aside class="category-container">
+      <p class="username">By: {{user.username}}</p>
+      <a href="/blog/{{category_id}}" class="category-btn">
+        <button value="{{category.category_name}}" class="btn category-btn">
+          {{category.category_name}}
+        </button>
+      </a>
+    </aside>
+    <figure class="img-container">
+      <img src="{{thumbnail}}" class="thumbnail" alt="Vacation picture">
+    </figure>
+  </a>
+</article>
+{{else}}
+<article class="blog-post-single">
+  <h3 class="blog-title-feed">
+    {{title}}
+  </h3>
+  <aside class="category-container">
+    <p class="username">By: {{user.username}}</p>
+    <a href="/blog/{{category_id}}" class="category-btn">
+      <button value="{{category.category_name}}" class="btn category-btn">
+        {{category.category_name}}
+      </button>
+    </a>
+  </aside>
+  <div class="fr-view">
+    {{{content}}}
+  </div>
+  <a href="/itinerary/{{itinerary_id}}">
+  <button id="itinerary-btn" class="btn post-option" style="width: 280px; padding: 10px;">
+    View Itinerary
+  </button>
+</a>
+</article>
+{{/if}}

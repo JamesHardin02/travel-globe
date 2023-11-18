@@ -1,0 +1,508 @@
+/*  11. parallax
+    17. testimonial/blockquote
+    30. PhotoSwipe CUSTOM
+    31. Owl Carousel CUSTOM
+*/
+
+/* 11. parallax */
+.parallax-overlay,
+.parallax-overlay-video-testimonials {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.parallax-overlay {
+  background: rgba(0, 0, 0, .7);
+}
+
+.parallax-overlay-video-testimonials {
+  background: rgba(0, 0, 0, .3);
+}
+
+.parallax {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 200px 0;
+}
+
+@media only screen and (max-width: 880px) {
+  .parallax {
+    padding: 100px 0;
+  }
+}
+
+.parallax-all {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border: none;
+  z-index: 1;
+}
+
+
+/* parallax button more */
+.more-wraper-center {
+  position: relative;
+  width: 120px !important;
+  max-width: 120px;
+  height: 120px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  z-index: 1;
+}
+
+.more-wraper-center.more-wraper-center-form {
+  /* margin: 5px auto 0 auto; */
+  margin: -5px auto 0 auto;
+  bottom: -20px;
+}
+
+.more-button-bg-center {
+  background: #fff;
+  border: 2px dashed #fff;
+}
+
+.more-button-bg-center.more-button-bg-center-dark {
+  background: #fff;
+  border: 2px dashed #111;
+}
+
+.more-button-circle {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-clip: content-box;
+  padding: 2.5px;
+  cursor: pointer;
+}
+
+.more-wraper-center:hover .more-button-circle {
+  -webkit-animation: spin 5s linear infinite;
+  -moz-animation: spin 5s linear infinite;
+  -ms-animation: spin 5s linear infinite;
+  -o-animation: spin 5s linear infinite;
+  animation: spin 5s linear infinite;
+}
+
+.more-button-txt-center {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  width: 120px !important;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  line-height: normal;
+  color: #111;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.more-button-txt-center span {
+  color: #111;
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 17. blockquote */
+.testimonial {
+  position: relative;
+  text-align: left;
+  margin: -5px 0 -30px 0;
+}
+
+.testimonial.testimonial-bottom {
+  margin: -5px 0 -30px 0;
+}
+
+.testimonial .inner {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.testimonial blockquote {
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+  color: #5f5f5f;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 2;
+  margin-bottom: 25px;
+  padding: 0;
+  z-index: 1;
+}
+
+q,
+blockquote {
+  quotes: none;
+}
+
+
+.quote-inner a,
+.quote-inner a:hover {
+  color: #5f5f5f;
+  text-decoration: none;
+}
+
+.testimonial blockquote::before {
+  content: "\201C";
+  position: absolute;
+  color: rgba(17, 17, 17, .15);
+  font-family: Georgia, serif;
+  font-size: 165px;
+  font-style: normal;
+  left: 0;
+  top: -90px;
+  z-index: -10;
+}
+
+@media only screen and (max-width: 768px) {
+  .testimonial blockquote::before {
+    font-size: 135px;
+    top: -70px;
+  }
+}
+
+/* 30. PhotoSwipe CUSTOM */
+/* .pswp__bg {
+  background: #fff;
+}
+
+.pswp__counter {
+  color: #111;
+  opacity: 1;
+}
+
+.pswp__caption__center {
+  color: #111;
+}
+
+.pswp__share-modal {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.pswp__img--placeholder--blank {
+  background: #fff;
+}
+
+.pswp__top-bar,
+.pswp__caption {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.pswp__ui--fit .pswp__top-bar,
+.pswp__ui--fit .pswp__caption {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.pswp__button,
+.pswp__button--arrow--left:before,
+.pswp__button--arrow--right:before {
+  background: url(../photoswipe/default-skin/default-skin-reverse.png) 0 0 no-repeat;
+  background-size: 264px 88px;
+  width: 44px;
+  height: 44px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.1),
+(-webkit-min-device-pixel-ratio: 1.09375),
+(min-resolution: 105dpi),
+(min-resolution: 1.1dppx) {
+
+  .pswp--svg .pswp__button,
+  .pswp--svg .pswp__button--arrow--left:before,
+  .pswp--svg .pswp__button--arrow--right:before {
+  
+  }
+
+  .pswp--svg .pswp__button--arrow--left,
+  .pswp--svg .pswp__button--arrow--right {
+    background: none;
+  }
+}
+
+.pswp__button--close {
+  background-position: 0 -44px;
+}
+
+.pswp__button--share {
+  background-position: -44px -44px;
+}
+
+.pswp__button--fs {
+  display: none;
+}
+
+.pswp--supports-fs .pswp__button--fs {
+  display: block;
+}
+
+.pswp--fs .pswp__button--fs {
+  background-position: -44px 0;
+}
+
+.pswp__button--zoom {
+  display: none;
+  background-position: -88px 0;
+}
+
+.pswp--zoom-allowed .pswp__button--zoom {
+  display: block;
+}
+
+.pswp--zoomed-in .pswp__button--zoom {
+  background-position: -132px 0;
+}
+
+.pswp--touch .pswp__button--arrow--left,
+.pswp--touch .pswp__button--arrow--right {
+  visibility: hidden;
+}
+
+.pswp__button--arrow--left,
+.pswp__button--arrow--right {
+  background: none;
+  top: 50%;
+  margin-top: -50px;
+  width: 70px;
+  height: 100px;
+  position: absolute;
+}
+*/
+.img-test {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.test-names {
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+
+/*
+.pswp__button--arrow--left {
+  left: 0;
+}
+
+.pswp__button--arrow--right {
+  right: 0;
+}
+
+.pswp__button--arrow--left:before,
+.pswp__button--arrow--right:before {
+  content: '';
+  top: 35px;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 30px;
+  width: 32px;
+  position: absolute;
+}
+
+.pswp__button--arrow--left:before {
+  left: 6px;
+  background-position: -138px -44px;
+}
+
+.pswp__button--arrow--right:before {
+  right: 6px;
+  background-position: -94px -44px;
+} */
+
+/* 31. Owl Carousel CUSTOM */
+/* .ferature-card .feature-img-box {
+  height: 200px;
+}
+
+.ferature-card .feature-img-box img {
+  height: 100%;
+}
+
+.ferature-card .feature-person-details {
+  height: 40px;
+  width: 40px;
+} */
+
+.owl-carousel-menu {
+  justify-content: space-between;
+}
+
+.owl-carousel img {
+  cursor: grab;
+}
+
+/* .owl-nav-custom-rooms,
+.owl-nav-custom-facilities,
+.owl-nav-custom-team,
+.owl-nav-custom-all,
+.owl-nav-custom-menu {
+  position: relative;
+  width: 114px !important;
+  max-width: 114px;
+  height: 50px;
+  left: 2px;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 2px auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.owl-buttons {
+  position: static;
+}
+
+.owl-prev,
+.owl-next {
+  position: absolute;
+  display: block;
+  text-align: center;
+}
+
+.owl-prev {
+  left: 0;
+}
+
+.owl-next {
+  left: 60px;
+}
+
+.owl-prev,
+.owl-next {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  -webkit-transition: all .4s ease-out;
+  -moz-transition: all .4s ease-out;
+  -ms-transition: all .4s ease-out;
+  -o-transition: all .4s ease-out;
+  transition: all .4s ease-out;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  font-size: 12px;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+  -webkit-transition: all .4s ease-out;
+  -moz-transition: all .4s ease-out;
+  -ms-transition: all .4s ease-out;
+  -o-transition: all .4s ease-out;
+  transition: all .4s ease-out;
+}
+
+.owl-prev.disabled,
+.owl-next.disabled {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  background: #ccc !important;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+  -moz-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+  -ms-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+  -o-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+  transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+  cursor: default !important;
+} */
+
+/* --------- parallax button more --------- */
+.more-button-txt-center.more-button-txt-center-close span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #111;
+}
+
+@media only screen and (max-width: 995px) {
+  .more-button-txt-center.more-button-txt-center-close span {
+    font-size: 12px;
+    letter-spacing: -0.02em;
+  }
+}
+
+
+/* parallax button more */
+@media only screen and (max-width: 995px) {
+  .more-button-txt-center {
+    font-size: 12px;
+    letter-spacing: -0.02em;
+  }
+}
+
+.more-button-txt-center {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+/* parallax */
+.parallax {
+  padding: 130px 0;
+}
+
+@media all and (min-width: 1920px) {
+  .parallax {
+    padding: 140px 0;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .parallax {
+    padding: 120px 0;
+  }
+}

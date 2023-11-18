@@ -1,0 +1,85 @@
+{{!-- <!-- home start -->
+<div class="upper-page bg-dark" id="home">
+  <!-- hero bg start -->
+  <div class="hero-fullscreen">
+    <div class="hero-fullscreen-FIX">
+      <div class="hero-bg">
+        <!-- hero slider wrapper start -->
+        <div class="swiper-container-wrapper">
+          <!-- swiper container start -->
+          <div class="swiper-container swiper2">
+            <!-- swiper wrapper start -->
+            <div class="swiper-wrapper">
+              <!-- swiper slider item start -->
+              <div class="swiper-slide">
+                <div class="swiper-slide-inner">
+                  <!-- swiper slider item IMG start -->
+                  <div class="swiper-slide-inner-bg bg-img-1 overlay overlay-dark">
+                    {{#if this.photo}}
+                    <!-- swiper slider item IMG start -->
+                    <div class="swiper-slide-inner-bg feature-pic gallery-bg overlay overlay-dark">
+                    </div>
+                    {{else}}
+                    <!-- HTML5 video URL start -->
+                    <video playsinline autoplay loop muted>
+                      <source src="{{this.video}}" type="video/mp4">
+                    </video>
+                    <!-- HTML5 video URL end -->
+                    {{/if}}
+                  </div>
+                  <!-- swiper slider item IMG end -->
+                  <!-- swiper slider item txt start -->
+                  <div class="swiper-slide-inner-txt-2">
+                    <!-- section subtitle start -->
+
+                    <!-- section subtitle end -->
+                    <!-- divider start -->
+                    <div class="divider-m"></div>
+                    <!-- divider end -->
+                    <!-- section title start -->
+                    <h1 class="{{this.class}}">
+                      {{this.content}}
+                    </h1>
+                    <!-- section title end -->
+                    <!-- divider start -->
+                    <div class="divider-m"></div>
+                    <!-- divider end -->
+                    {{#if this.noAccessBtn}}
+                    {{else}}
+                    <!-- button start -->
+                    <div class="more-wraper-center more-wraper-center-home fadeIn-element">
+                      <a class="button button-effect" href="/contact/">
+                        <div class="more-wraper-inner-home">
+                          <i class="pulse"></i>
+                          <div class="more-button-txt-center more-button-txt-center-home">
+                            <span>Get early access</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- button end -->
+                    {{/if}}
+                  </div>
+                  <!-- swiper slider item txt end -->
+                </div>
+              </div>
+              <!-- swiper slider item end -->
+            </div>
+            <!-- swiper wrapper end -->
+          </div>
+          <!-- swiper container end -->
+        </div>
+        <!-- hero slider wrapper end -->
+      </div>
+    </div>
+  </div>
+  <!-- hero bg end -->
+  <!-- scroll indicator start -->
+  <div class="scroll-indicator scroll-indicator-home">
+    <div class="scroll-indicator-wrapper">
+      <div class="scroll-line fadeIn-element"></div>
+    </div>
+  </div>
+  <!-- scroll indicator end -->
+</div> --}}
+{{> image-gallery}}

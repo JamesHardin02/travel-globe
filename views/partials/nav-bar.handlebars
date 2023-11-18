@@ -1,0 +1,133 @@
+<!-- border top start -->
+<!-- container start -->
+<div class="container-fluid nopadding">
+  <div class="extra-margin-border">
+    <div class="border-top"></div>
+  </div>
+</div>
+<!-- container end -->
+<!-- border top end navbar-fixed-top-->
+<nav class="navbar  navbar-bg-switch">
+  <!-- container start -->
+  <div class="container-fluid nopadding">
+    <div id="nav-img-wrap" class="navbar-header fadeIn-element">
+      <!-- logo start -->
+      <div class="logo">
+        <a class="navbar-brand logo" href="/">
+          <!-- logo light start -->
+          <img alt="Logo" class="logo-light" src="/public/img/mwwhite.webp">
+          <!-- logo light end -->
+          <!-- logo dark start -->
+          <img alt="Logo" class="logo-dark" src="/public/img/mvblack.webp">
+          <!-- logo dark end -->
+        </a>
+      </div>
+      <!-- logo end -->
+    </div>
+    <!-- main navigation start -->
+    <div class="main-navigation fadeIn-element">
+      <div class="navbar-header">
+        <button aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar-collapse"
+          data-toggle="collapse" type="button"><span class="sr-only">Toggle
+            navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span
+            class="icon-bar"></span></button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <!-- menu start -->
+        <ul class="nav navbar-nav .nav-alter" style="float:none">
+          <li>
+            <a style="padding:15px;" class="nav-pad" href="/">Home</a>
+          </li>
+          {{!-- <li style="height: min-height;">
+
+            <button style="padding: 15px" id="" type="submit" style="font-size: 17px;" data-toggle="modal"
+              data-target="#destinationDrop">
+              <a style="padding: 0px">Destinations</a>
+            </button>
+
+          </li>
+          <li>
+            <a style="padding:15px;" class="nav-pad" href="/blog/0">blogs</a>
+          </li> --}}
+          <li>
+            <a style="padding:15px;" class="nav-pad" href="/itinerary">Voyager Itineraries</a>
+          </li>
+          <li>
+            <a style="padding:15px;" class="nav-pad" href="/contact">Contact Us</a>
+          </li>
+          {{#if loggedIn}}
+          <li>
+            <a style="padding:15px;" class="nav-pad" href="/dashboard/itinerary">Profile</a>
+          </li>
+          <li>
+            <a style="padding:15px;" id="logout" class="btn-no-style nav-pad" href="#">logout</a>
+          </li>
+          {{else}}
+          {{!-- <li>
+            <a style="padding:15px;" class="nav-pad" href="/ambassador">Become A Voyager</a>
+          </li> --}}
+          <li>
+            <a style="padding:15px;" class="nav-pad" href="/login-signup">Login/Signup</a>
+          </li>
+          {{/if}}
+        </ul>
+        <!-- menu end -->
+      </div>
+    </div>
+    <!-- main navigation end -->
+  </div>
+  <!-- container end -->
+</nav>
+<!-- navigation end -->
+
+<div class="modal fade" id="destinationDrop" tabindex="-1" role="dialog" aria-labelledby="destinationDropLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="display: flex;flex-direction: column;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="destinationDropLabel">Choose Your Next Destination</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div style="display:flex; flex-wrap:wrap;">
+        {{#each destinations as | destination |}}
+        {{#if (check_us @key)}}
+        <div class="destination-container">
+          <div class="destination-section">
+            <h3>USA</h3>
+            {{#each destination}}
+            <div class="destination-container">
+              <div class="destination-section">
+                <h3 style="border-bottom: 1.75px solid grey">{{@key}}</h3>
+                <div>
+                  {{#each this as | city |}}
+                  <button data-href="/blog/city/{{city}}/0">{{city}}</button>
+                  {{/each}}
+                </div>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+        {{else}}
+        <div class="destination-container">
+          <div class="destination-section">
+            <h3>{{@key}}</h3>
+            <div>
+              {{#each destination as | city |}}
+              <button data-href="/blog/city/{{city}}/0">{{city}}</button>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+        {{/if}}
+        {{/each}}
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

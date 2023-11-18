@@ -1,0 +1,309 @@
+/* Voyager Features Page */
+.features-conatiner{
+  display: flex;
+  }
+  
+  .tile-detail{
+    flex: 1;
+  }
+  
+  .tile-1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0px ;
+  }
+  
+  .tile-img img{
+    width: 500px;
+    height: 500px;
+  }
+  
+  .tile-1{
+    width: 600px;
+  }
+  
+  .tile-detail h2{
+    padding-top: 15px;
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .tile-detail p{
+    padding-left: 25px;
+  }
+  
+  .creator img{
+    width: 20px;
+    height: 20px;
+   margin-left: 10px;
+  }
+  
+  .creator{
+    display: flex;
+    justify-content: center;
+  }
+  .creator div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tile-detail a{
+    color: #5f5f5f;
+  }
+  
+  .tile-detail a:hover{
+    color: #8f8f8f;
+  }
+  
+  .creator div p{
+    padding-left: 10px;
+  }
+
+  @media only screen and (max-width: 995px) {
+    .tile-1 {
+   display: flex;
+   flex-direction: row;
+   width: 90vw;
+   margin-bottom: 10px;
+    }
+  }
+  
+  @media only screen and (max-width: 995px) {
+    .tile-img {
+  flex: 1;
+    }
+  }
+  
+  @media only screen and (max-width: 995px) {
+    .tile-detail {
+   flex: 2;
+    }
+  }
+  
+  @media only screen and (max-width: 995px) {
+    .tile-img img {
+   width: 150px;
+   height: 150px;
+    }
+  }
+  
+  @media only screen and (max-width: 995px) {
+    .tile-detail h2 {
+  font-size: 16px;
+  padding: 0 0;
+  text-align: left;
+    }
+  }
+  
+  @media only screen and (max-width: 995px) {
+    .tile-detail {
+  margin-left: 5px;
+    }
+  }
+  
+  @media only screen and (max-width: 995px) {
+    .creator p{
+  font-size: 11px;
+  padding-left: 1px;
+    }
+  }
+  
+  @media only screen and (max-width: 360px) {
+    .creator p{
+  font-size: 8px;
+  padding-left: 1px;
+    }
+  }
+  
+  @media only screen and (max-width: 995px) {
+    .creator img{
+  margin-left: 5px;
+    }
+  }
+  
+  @media only screen and (max-width: 995px) {
+    .creator {
+  width: 100%;
+    }
+  }
+  
+  @media only screen and (max-width: 995px) {
+    .creator div p {
+  padding: 0 ;
+    }
+  }
+  
+  @media only screen and (max-width: 995px) {
+    .tile-detail p {
+  padding: 0 ;
+    }
+  }
+
+  @media all and (max-width: 1400px) {
+    .tile-img img {
+      width: 400px;
+      height: 400px;
+    }
+  }
+  
+  @media all and (max-width: 1200px) {
+    .tile-img img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  @media only screen and (max-width: 995px) {
+    .tile-detail a h2{
+  font-size: 35px;
+    }
+  }
+  
+  @media only screen and (max-width: 995px) {
+    .tile-detail  h2{
+  font-size: 35px;
+    }
+  }
+  
+  
+  @media only screen and (max-width: 640px) {
+    .tile-img img {
+  width: 200px;
+  height: 200px;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .tile-img img {
+  width: 150px;
+  height: 150px;
+    }
+  }
+  
+  @media only screen and (max-width: 640px) {
+    .tile-detail  h2 {
+  font-size: 20px;
+    }
+  }
+  
+  @media only screen and (max-width: 640px) {
+    .tile-detail a h2 {
+  font-size: 20px;
+    }
+  }
+  @media only screen and (max-width: 3600px) {
+    .tile-detail a h2 {
+  font-size: 15px;
+    }
+  }
+  @media only screen and (max-width: 3600px) {
+    .tile-detail  h2 {
+  font-size: 15px;
+    }
+  }
+
+  @media only screen and (max-width: 995px) {
+    .features-conatiner {
+   display: block;
+   margin-left: 8px;
+    }
+  }
+
+  /* Itinerary */
+
+  .profile-image img{
+    padding-bottom: 20px;
+  }
+  
+  .visited-contries{
+    display: flex;
+    padding: 20px 0px 20px 0px;
+    align-items: center;
+    margin-right: 0px;
+  }
+  
+  .visited-contries h2{
+    padding-left: 1px;
+  }
+  
+  .profile-bio{
+    margin-top: 20px;
+    width: 70%;
+  }
+  
+  .visited-contries p{
+    line-height: 15px;
+    text-align: left;
+    padding-left: 1px;
+  }
+
+  .infomation{
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+  }
+  
+  .activies{
+    display: flex;
+    padding: 20px 0px 20px 0px;
+    align-items: center;
+  }
+  
+  .activies p{
+    font-size: 12px;
+    text-align: left;
+    padding-left: 10px;
+  }
+  
+  
+  .curators-statement{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .curators-statement{
+  margin-bottom: 10px;
+  }
+
+  .profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+  }
+  
+  .profile-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  @media only screen and (max-width: 880px) {
+    .visited-contries h2 {
+    padding: 0 1px;
+    }
+  }
+
+  .logo-light {
+    width: 65px;
+}
+
+.logo-dark {
+  width: 65px;
+}
+
+@media only screen and (max-width: 640px) {
+.logo-light {
+    width: 60px;
+}
+}
+@media only screen and (max-width: 640px) {
+.logo-dark {
+    width: 60px;
+}
+}

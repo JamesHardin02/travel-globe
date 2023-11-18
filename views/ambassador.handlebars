@@ -1,0 +1,133 @@
+{{> nav-bar nav}}
+
+<!-- container start -->
+<div class="container margin-top ambassador-form-container">
+  <div id="mobile-video" class="form-video">
+    <video class="" playsinline autoplay loop muted>
+      <source src="/public/html5-videos-22/About-Video2.mp4" type="video/mp4">
+    </video>
+    <h4 id="mobile-title" class="h4-comments Ambassador">
+      Become a<br />Voyager
+    </h4>
+  </div>
+  <!-- section subtitle start -->
+  <!-- divider start -->
+  <!-- divider end -->
+  <!-- comment form start -->
+
+  <form class="ambassador-form margin-top" action="#" id="form-3" method="post" name="send">
+    <!-- col start -->
+    <div>
+      <h4 class="questions-ambassador">Enter first and last name</h4>
+      <input class="requiredField-c name" id="name" name="name" placeholder="Name" type="text">
+    </div>
+    <!-- col end -->
+    <!-- col start -->
+    <div>
+      <h4 class="questions-ambassador">Enter email address</h4>
+      <input class="requiredField-c email" id="email-c" name="email" placeholder="Email" type="text">
+    </div>
+    <!-- col end -->
+    <div>
+      <h4 class="questions-ambassador">How many countries have you visited?</h4>
+      <input class="requiredField-c email" id="how-many" name="how-many" placeholder="Type Number" type="text">
+    </div>
+    <div>
+      <h4 class="questions-ambassador">List your 3 favorite vacation activities</h4>
+      <input class="requiredField-c email" id="how-many" name="how-many" placeholder="Hiking etc." type="text">
+    </div>
+    <!-- col start -->
+    <!-- col end -->
+    <button id="contact-submit" class="edit-mode btn margin-auto" type="submit" data-toggle="modal"
+      data-target="#exampleModal">
+      Submit
+    </button>
+  </form>
+  <!-- comment form end -->
+</div>
+<!-- contact end -->
+
+<!-- home end -->
+<!-- vertical lines start -->
+<div class="vertical-lines-wrapper">
+  <div class="vertical-lines"></div>
+</div>
+<!-- vertical lines end -->
+<!-- contact start -->
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="collapse-btn" type="button" data-toggle="collapse" data-target="#collapseOne"
+          aria-expanded="true" aria-controls="collapseOne">
+          <ion-icon class="fa-solid fa-plus" name="add"></ion-icon> What do Voyagers do?
+        </button>
+      </h5>
+    </div>
+    {{!-- content --}}
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body collapse-content">
+        {{!-- phone --}}
+        <div class="post-list-bg facilities-bg-4 phone-figure"></div>
+        <div>
+          <h2 class="hero-heading hero-heading-dark" style="margin-top: 10px;">
+            Display and Share<br>
+            Hidden Gems from Your Voyages.
+          </h2>
+
+          <div class="section-txt">
+            <p>
+              Voyagers reveal the hidden gems to be enjoyed in cities across the world by providing
+              hand-crafted
+              itineraries which include pictures, videos, reviews, and insights which guides travelers
+              to experience the most fulfilling vacation of their travel destination.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{!-- content end --}}
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="collapse-btn" type="button" data-toggle="collapse" data-target="#collapseThree"
+          aria-expanded="true" aria-controls="collapseThree">
+          <ion-icon class="fa-solid fa-plus" name="add"></ion-icon> Opportunities For Voyagers
+        </button>
+      </h5>
+    </div>
+    {{!-- content --}}
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body collapse-content">
+        {{!-- phone --}}
+        <div id="third-collapse-phone" class="post-list-bg facilities-bg-5 phone-figure"></div>
+        <div>
+          <div class="collapse-content" style="flex-direction: row; justify-content: center;">
+            <h2 class="hero-heading hero-heading-dark" style="width:fit-content; margin:0px">
+              Inspire Travel<br>
+              Globally
+            </h2>
+            <img src="https://media.tenor.com/CKA21kCjN3QAAAAd/ali-yalniz-world-is-spinning.gif" id="content" width="49"
+              height="49">
+          </div>
+          <div class="section-txt padding-zero">
+            <p>
+              Profit from your travel experiences by
+              marketing your own tailored itineraries
+              comprised of your experiences, insights, and
+              knowledge of hidden gems of your favorite travel destinations
+              which will transform an average vacation
+              into an awe-inspiring voyage.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{!-- content end --}}
+  </div>
+</div>
+<!-- container end -->
+<!-- contact modal end -->
+{{> contact footer}}
+{{> uparrow}}

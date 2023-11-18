@@ -1,0 +1,109 @@
+{{> nav-bar nav}}
+{{!-- {{> hero hero}} --}}
+
+<div id="globeViz"></div>
+
+{{!-- <h2 class="creator-itinerary-h2">Browse Itineraries <br />Curated By My
+  Voyage Ambassadors</h2>
+{{#if noData}}
+<h2 class="noData">No itineraries posted yet...</h2>
+{{else}}
+{{#each posts as |post|}}
+<div class="itinerary-city-div">
+  <h2 class="itinerary-city-h2">{{check_city @key}}</h2>
+</div>
+
+<div class="legendary-gallery">
+  <div class="owl-carousel owl-carousel-itineraries">
+    {{#each post as |itinerary|}}
+    <div class="testimonial testimonial-2">
+      {{> itinerary itinerary}}
+      </li>
+    </div>
+    {{/each}}
+  </div>
+</div>
+{{/each}}
+{{/if}} --}}
+
+{{!-- <h2 style="margin-top:25px; border-bottom: 1px solid black; width: fit-content;">Featured Itineraries</h2>
+<!-- gallery IMG start -->
+<div id="gallery-img" class="bg-light" style="
+    margin-bottom: 25px;
+">
+  <!-- divider start -->
+  <div class="divider-m-2"></div>
+  <!-- divider end -->
+  <!-- container start -->
+  <div class="container-fluid">
+    <!-- row start -->
+    <div class="row">
+      <div class="features-conatiner">
+        <div class="tile-1">
+          <div class="tile-img">
+            <a data-size="1280x896" href="/feature/greece/"><img alt="Image description" class="img-responsive"
+                src="/public/img/feature/santorini.webp"></a>
+          </div>
+          <div class="tile-detail" style="display:flex; flex-direction:column; align-items:center;">
+            <a href="/feature/greece/">
+              <h2 style="text-align: center;">Chelles Ultimate Trip to Greece</h2>
+            </a>
+            <div class="creator" style="width: fit-content;">
+              <p style="padding-left: 10px">curated by</p>
+              <div>
+                <img src="/public/img/feature/chelle.png" alt="profile image">
+                <p style="padding-left: 5px">Tichelle Richards </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tile-1">
+          <div class="tile-img">
+            <a data-size="1280x896" href="#"><img alt="Image description" class="img-responsive"
+                src="/public/img/feature/barca.webp"></a>
+          </div>
+          <div class="tile-detail" style="display:flex; flex-direction:column; align-items:center;">
+            <h2 style="text-align: center;">Dancing and tasting my way through Barcelona</h2>
+            <div>
+              <p>Coming Soon</p>
+            </div>
+            <div class="creator" style="width: fit-content;">
+              <p style="padding-left: 10px">curated by</p>
+              <div>
+                <img src="/public/img/feature/heidi.webp" alt="profile image">
+                <p style="padding-left: 5px">Heidi Emad </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tile-1">
+          <div class="tile-img">
+            <a data-size="1280x896" href="#"><img alt="Image description" class="img-responsive"
+                src="/public/img/feature/lodubai (1).webp"></a>
+          </div>
+          <div class="tile-detail" style="display:flex; flex-direction:column; align-items:center;">
+            <h2 style="text-align: center;">Exploring the Glitz and Glamour Dubai the City of Gold</h2>
+            <div>
+              <p>Coming Soon</p>
+            </div>
+            <div class="creator" style="width: fit-content;">
+              <p style="padding-left: 10px">curated by</p>
+              <div>
+                <img src="/public/img/feature/lo (1).webp" alt="profile image">
+                <p style="padding-left: 5px">Lonisha brown </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- row end -->
+  </div>
+  <!-- container end -->
+</div> --}}
+<!-- gallery IMG end -->
+{{> contact footer}}
+{{> uparrow}}
+<script src="//unpkg.com/d3"></script>
+<script src="//unpkg.com/globe.gl"></script>
+<script src="/public/js/itinerary/globe-nav.js"></script>

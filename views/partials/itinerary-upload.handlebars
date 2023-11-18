@@ -1,0 +1,161 @@
+<!-- post wrapper start -->
+<div class="post-wrapper">
+  {{#if this.editMode}}
+  <h2 style="margin-top:20px;">Edit the itinerary template below</h2>
+  {{else}}
+  <h2 style="margin-top:20px;">Please fill out the itinerary template below</h2>
+  {{/if}}
+  <!-- row start -->
+  <div class="row">
+    <!-- col start -->
+    <div class="col-lg-12">
+      <!-- divider start -->
+      <div class="divider-l"></div>
+      <!-- divider end -->
+      <!-- scroll indicator start -->
+      <!-- line start -->
+      <div class="the-line scroll-line fadeIn-element"></div>
+      <!-- line end -->
+      <!-- scroll indicator end -->
+      <!-- divider start -->
+      <div class="divider-l"></div>
+      <!-- divider end -->
+    </div>
+    <!-- col end -->
+  </div>
+  <!-- row end -->
+  <!-- post content start -->
+  <div class="lower-page lower-page-post">
+    <div class="post-content">
+      <div class="container">
+        <div id="itinerary" class="extra-margin-container extra-margin-container-post">
+          <div class="row">
+            <!-- col start -->
+            <div class="col-lg-12">
+              <div class="text">
+                <!-- divider start -->
+                <div class="divider-m"></div>
+                <!-- divider end -->
+                <h2 class="guider">
+                  Provide a thumbnail
+                </h2>
+                <input class="image-input" id="thumbnail-itinerary" type="file" accept="image/png, image/jpeg" required>
+                <!-- section title start -->
+                <h2 id="itinerary-title">
+                  Title
+                </h2>
+                <input id="itinerary-title-input" type="text" required />
+                <!-- section title end -->
+                <!-- divider start -->
+                <div class="divider-l"></div>
+                <!-- divider end -->
+              </div>
+            </div>
+            <!-- col end -->
+          </div>
+          <!-- row end -->
+          <!-- row start -->
+          <!-- row end -->
+          <!-- row start -->
+          <div class="row">
+            <!-- col start -->
+            <div class="col-md-12">
+              <!-- divider start -->
+              <!-- divider end -->
+              <!-- section txt start -->
+              <h2 class="guider">Introduction</h2>
+              <textarea id="introduction" required></textarea>
+              <!-- section txt end -->
+            </div>
+            <!-- col end -->
+          </div>
+          <!-- row end -->
+          <div class="row">
+            <!-- col start -->
+            <div class="col-lg-12">
+              <!-- divider start -->
+              <div class="divider-l"></div>
+              <!-- divider end -->
+              <!-- line start -->
+              <div class="the-line"></div>
+              <!-- line end -->
+              <!-- divider start -->
+              <div class="divider-l"></div>
+              <!-- divider end -->
+            </div>
+            <!-- col end -->
+          </div>
+        </div>
+      </div>
+      <!-- container start -->
+    </div>
+    <!-- container end -->
+  </div>
+  <menu id="add-sect-menu" class="add-cat-menu">
+    <h2>Add a section </h2>
+    <button class="btn iti-section-btn" data-cat="stay"><ion-icon class="fa-solid fa-plus" name="add"></ion-icon>
+      Stay</button>
+    <button class="btn iti-section-btn" data-cat="taste"><ion-icon class="fa-solid fa-plus" name="add"></ion-icon>
+      Taste</button>
+    <button class="btn iti-section-btn" data-cat="vibe"><ion-icon class="fa-solid fa-plus" name="add"></ion-icon>
+      Vibe</button>
+    <button class="btn iti-section-btn" data-cat="experience"><ion-icon class="fa-solid fa-plus" name="add"></ion-icon>
+      Experience</button>
+    <label class="margin-top" for="blurb">Include a descriptive sales pitch for the payment page of itinerary</label>
+    <textarea name="blurb" id="blurb"></textarea>
+    <fieldset style="display: flex; flex-direction:column; align-items: center;">
+      <label for="nation-select">Which country is this itinerary for?</label>
+      <select id="nation-select">
+        {{#each destinations as | nation |}}
+        <option data-nation="{{nation.code}}">{{nation.name}}</option>
+        {{/each}}
+      </select>
+    </fieldset>
+    <fieldset id="tag-check">
+      <legend>Choose a category for this itinerary:</legend>
+      <div>
+        <input type="radio"  id="stay" name="category" value="stay" checked>
+        <label for="stay">Stay</label>
+      </div>
+      <div>
+        <input type="radio"  id="taste" name="category" value="taste">
+        <label for="taste">Taste</label>
+      </div>
+      <div>
+        <input type="radio"  id="vibe" name="category" value="vibe">
+        <label for="vibe">Vibe</label>
+      </div>
+      <div>
+        <input type="radio"  id="experience" name="category" value="experience">
+        <label for="experience">Experience</label>
+      </div>
+    </fieldset>
+    
+
+    {{#if this.editMode}}
+    <button style="background-color: rgb(210, 255, 210);" id="submit-itinerary" type="submit" class="edit-link btn submit-blog">Confirm
+      Changes
+    </button>
+    <button type="button" id="delete-button" class="edit-link btn submit-blog">Delete Itinerary</button>
+    {{else}}
+    <button style="background-color: rgb(210, 255, 210);" id="submit-itinerary" type="submit" class="edit-link btn submit-blog">Submit
+      itinerary
+    </button>
+    {{/if}}
+
+  </menu>
+</div>
+<!-- post wrapper end -->
+<script id="stayTemp" type="text/x-handlebars">
+{{> i-stay}}
+</script>
+<script id="experienceTemp" type="text/x-handlebars">
+{{> i-experience}}
+</script>
+<script id="tasteTemp" type="text/x-handlebars">
+{{> i-taste}}
+</script>
+<script id="vibeTemp" type="text/x-handlebars">
+{{> i-vibe}}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>

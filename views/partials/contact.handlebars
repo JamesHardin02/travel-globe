@@ -1,0 +1,466 @@
+{{#if this.bareBones}}
+<!-- container start -->
+<div class="container">
+  <div class="margin-top"></div>
+  <div>
+    <!-- section subtitle start -->
+    {{#if this.contactUs}}
+    <h4 class="h4-comments Ambassador">
+      Contact Us
+    </h4>
+    {{else}}
+    <h4 class="h4-comments join margin-bottom">
+      Join the Voyage
+    </h4>
+    {{/if}}
+    <!-- section subtitle end -->
+    <!-- comment form start -->
+    <div id="comment-form">
+      <div class="extra-margin-blog">
+        <form id="form-3" class="validate signup-form">
+          <!-- col start -->
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <input class="requiredField-c name" id="first-name" name="FNAME" placeholder="First Name" type="text">
+          </div>
+          <!-- col end -->
+          <!-- col start -->
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <input class="requiredField-c name" id="last-name" name="LNAME" placeholder="Last Name" type="text">
+          </div>
+          <!-- col end -->
+          <!-- col start -->
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <input class="requiredField-c name" id="email" name="EMAIL" placeholder="Email" type="email">
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <input class="requiredField-c name" id="phone" name="PHONE" placeholder="Phone Number" type="text">
+          </div>
+          <div>
+            <!-- button start -->
+            <div class="divider-xl-700"></div>
+            <div class="more-wraper-center more-wraper-center-form-2">
+              <div
+                class="more-button-bg-center more-button-bg-center-dark more-button-bg-center-dark-close more-button-circle">
+              </div>
+              <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>
+              <div class="more-button-txt-center more-button-txt-center-close">
+                <button id="contact-submit" type="submit" style="font-size: 17px;" data-toggle="modal"
+                  data-target="#exampleModal">
+                  Submit
+                </button>
+              </div>
+            </div>
+            <!-- button end -->
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- comment form end -->
+  </div>
+</div>
+<!-- container start -->
+<div class="container-fluid">
+  <!-- row start -->
+  <div class="row footer-credits">
+    <!-- footer logo start -->
+    <div class="footer-credits-logo">
+      <a href="/contact"><img alt="Logo Footer" src="/public/img/mv-logo-bottom.webp"></a>
+    </div>
+    <!-- footer logo end -->
+    <!-- col start -->
+    <div class="col-lg-12">
+      <!-- social icons start -->
+      <div class="social-icons">
+        <ul>
+          <li>
+            <a target="_blank" href="https://www.facebook.com/profile.php?id=100032894001313">
+              <ion-icon name="logo-facebook"></ion-icon><span>Facebook</span></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.instagram.com/myvoyagesofficial/">
+              <ion-icon name="logo-instagram"></ion-icon><span>Instagram</span></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.linkedin.com/company/myvoyages/">
+              <ion-icon name="logo-linkedin"></ion-icon><span>linkedin</span></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.tiktok.com/@myvoyagesofficial?lang=en">
+              <ion-icon name="logo-tiktok"></ion-icon><span>Tiktok</span></a>
+          </li>
+        </ul>
+      </div>
+      <!-- social icons end -->
+      <!-- divider start -->
+      <div class="divider-l"></div>
+      <!-- divider end -->
+    </div>
+    <!-- col end -->
+    <!-- col start -->
+    <div class="col-lg-12">
+      <!-- copyright start -->
+      <div class="copyright">
+        My Voyages &#174; 2022 All Rights Reserved.
+      </div>
+      <!-- copyright end -->
+    </div>
+    <!-- col end -->
+  </div>
+  <!-- row end -->
+</div>
+<!-- container end -->
+<!-- contact end -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Contact Information Submitted ✅</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="text-align:center;">
+        Thank you for your interest in My Voyages!<br />Your contact information has been successfully submitted.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/public/js/contact.js"></script>
+{{else}}
+<!-- contact start -->
+<div id="contact" class="section-all bg-light">
+  <!-- container start -->
+  <div class="container-fluid">
+    {{#if this.noTopLines}}
+    {{else}}
+    <!-- row start -->
+    <div class="row">
+      <!-- col start -->
+      <div class="col-lg-12">
+        <!-- divider start -->
+        <div class="divider-l"></div>
+        <!-- divider end -->
+        <!-- line start -->
+        <div class="the-line"></div>
+        <!-- line end -->
+        <!-- divider start -->
+        <div class="divider-l"></div>
+        <!-- divider end -->
+      </div>
+      <!-- col end -->
+    </div>
+    <!-- row end -->
+    {{/if}}
+    {{#if this.pTop}}
+    <!-- row start -->
+    <div class="row">
+      <!-- col start -->
+      <div class="col-lg-12">
+        <!-- parallax wrapper start -->
+        <div class="parallax-title">
+          <!-- HTML5 video URL start -->
+          <video playsinline autoplay loop muted>
+            <source src="{{this.video}}" type="video/mp4">
+          </video>
+          <!-- HTML5 video URL end -->
+          <!-- page title start -->
+          <div class="parallax-title-content">
+            {{{this.content}}}
+          </div>
+          <!-- page title end -->
+        </div>
+        <!-- parallax wrapper end -->
+      </div>
+      <!-- col end -->
+    </div>
+    <!-- row end -->
+    <!-- row start -->
+    <div class="row">
+      <!-- col start -->
+      <div class="col-lg-12">
+        <!-- divider start -->
+        <div class="divider-l"></div>
+        <!-- divider end -->
+        <!-- line start -->
+        <div class="the-line"></div>
+        <!-- line end -->
+        <!-- divider start -->
+        <div class="divider-l"></div>
+        <!-- divider end -->
+      </div>
+      <!-- col end -->
+    </div>
+    <!-- row end -->
+    {{/if}}
+  </div>
+  <!-- container end -->
+  <!-- container start -->
+  {{#if this.noForm}}
+  {{else}}
+  <div class="container">
+    <!-- row start -->
+    <!-- divider start -->
+    <div class="divider-xl"></div>
+    <!-- divider end -->
+    <div>
+      <!-- section subtitle start -->
+      {{#if this.contactUs}}
+      <h4 class="h4-comments Ambassador">
+        Contact Us
+      </h4>
+      {{else}}
+      <h4 class="h4-comments join">
+        Join the Voyage
+      </h4>
+      {{/if}}
+      <!-- section subtitle end -->
+      <!-- divider start -->
+      <div class="divider-l"></div>
+      <!-- divider end -->
+      <!-- comment form start -->
+      <div id="comment-form">
+        <div class="extra-margin-blog">
+          <form id="form-3" class="validate signup-form">
+            <!-- col end -->
+            {{#if this.signup}}
+            <!-- col start -->
+            <div class="credential-inputs">
+              <input class="requiredField-c name" id="username-signup" name="FNAME" placeholder="Username" type="text"
+                required />
+            </div>
+            <!-- col end -->
+            <!-- col start -->
+            <div class="credential-inputs">
+              <input class="requiredField-c name" id="email-signup" name="EMAIL" placeholder="Email" type="email"
+                required />
+            </div>
+            <div class="credential-inputs">
+              <input class="requiredField-c name" id="password-signup" name="PHONE" placeholder="Password"
+                type="password" required />
+            </div>
+            {{else}}
+            <!-- col start -->
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <input class="requiredField-c name" id="first-name" name="FNAME" placeholder="First Name" type="text">
+            </div>
+            <!-- col end -->
+            <!-- col start -->
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <input class="requiredField-c name" id="last-name" name="LNAME" placeholder="Last Name" type="text">
+            </div>
+            <!-- col end -->
+            <!-- col start -->
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <input class="requiredField-c name" id="email" name="EMAIL" placeholder="Email" type="email">
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <input class="requiredField-c name" id="phone" name="PHONE" placeholder="Phone Number" type="text">
+            </div>
+            {{/if}}
+            <div>
+              <!-- button start -->
+              {{#if this.signup}}
+              <div style="margin-top: 15px;"></div>
+              {{else}}
+              <div class="divider-xl"></div>
+
+              <div class="divider-xl"></div>
+              {{/if}}
+              <div class="more-wraper-center more-wraper-center-form-2">
+                <div
+                  class="more-button-bg-center more-button-bg-center-dark more-button-bg-center-dark-close more-button-circle">
+                </div>
+                <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display:none"></div>
+                  <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+                {{#if this.signup}}
+                <div class="more-button-txt-center more-button-txt-center-close">
+                  <button type="submit" style="font-size: 17px;">
+                    Submit
+                  </button>
+                </div>
+                {{else}}
+                <div class="more-button-txt-center more-button-txt-center-close">
+                  <button id="contact-submit" type="submit" style="font-size: 17px;" data-toggle="modal"
+                    data-target="#exampleModal">
+                    Submit
+                  </button>
+                </div>
+                {{/if}}
+              </div>
+              <!-- button end -->
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- comment form end -->
+    </div>
+    <!-- row start -->
+    <div class="row">
+      <!-- col start -->
+      <div class="col-lg-12">
+        <!-- divider start -->
+        <div class="divider-l"></div>
+        <!-- divider end -->
+        <!-- line start -->
+        <div class="the-line"></div>
+        <!-- line end -->
+        <!-- divider start -->
+        <div class="divider-l"></div>
+        <!-- divider end -->
+      </div>
+      <!-- col end -->
+    </div>
+    <!-- row end -->
+  </div>
+  {{/if}}
+  {{#if this.pBottom}}
+  <!-- row start -->
+  <div class="row">
+    <!-- col start -->
+    <div class="col-lg-12">
+      <!-- parallax wrapper start -->
+      <div class="parallax-title">
+        <!-- HTML5 video URL start -->
+        <video playsinline autoplay loop muted>
+          <source src="{{this.video}}" type="video/mp4">
+        </video>
+        <!-- HTML5 video URL end -->
+        <!-- page title start -->
+        <div class="parallax-title-content">
+          {{{this.content}}}
+        </div>
+        <!-- page title end -->
+      </div>
+      <!-- parallax wrapper end -->
+    </div>
+    <!-- col end -->
+  </div>
+  <!-- row end -->
+  <!-- row start -->
+  {{#if this.noForm}}
+  {{else}}
+  <div class="row">
+    <!-- col start -->
+    <div class="col-lg-12">
+      <!-- divider start -->
+      <div class="divider-l"></div>
+      <!-- divider end -->
+      <!-- line start -->
+      <div class="the-line"></div>
+      <!-- line end -->
+      <!-- divider start -->
+      <div class="divider-l"></div>
+      <!-- divider end -->
+    </div>
+    <!-- col end -->
+  </div>
+  <!-- row end -->
+  {{/if}}
+  {{/if}}
+  <!-- container end -->
+  <!-- container start -->
+  <div class="container-fluid">
+    <!-- row start -->
+    <div class="row footer-credits">
+      <!-- footer logo start -->
+      <div class="footer-credits-logo">
+        <a href="/contact"><img alt="Logo Footer" src="/public/img/mv-logo-bottom.webp"></a>
+      </div>
+      <!-- footer logo end -->
+      <!-- divider start -->
+      <div class="divider-l"></div>
+      <!-- divider end -->
+      <!-- col start -->
+      <div class="col-lg-12">
+        <!-- social icons start -->
+        <div class="social-icons">
+          <ul>
+            {{!-- class="ion-social-facebook" class="ion-social-instagram" class="ion-social-linkedin"
+            class="tiktok"<iconify-icon icon="cib:tiktok"></iconify-icon>class="typcn:social-facebook"--}}
+            <li>
+              <a target="_blank" href="https://www.facebook.com/profile.php?id=100032894001313">
+                <ion-icon name="logo-facebook"></ion-icon><span>Facebook</span></a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.instagram.com/myvoyagesofficial/">
+                <ion-icon name="logo-instagram"></ion-icon><span>Instagram</span></a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.linkedin.com/company/myvoyages/">
+                <ion-icon name="logo-linkedin"></ion-icon><span>linkedin</span></a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.tiktok.com/@myvoyagesofficial?lang=en">
+                <ion-icon name="logo-tiktok"></ion-icon><span>Tiktok</span></a>
+            </li>
+          </ul>
+        </div>
+        <!-- social icons end -->
+        <!-- divider start -->
+        <div class="divider-l"></div>
+        <!-- divider end -->
+      </div>
+      <!-- col end -->
+      <!-- col start -->
+      <div class="col-lg-12">
+        <!-- copyright start -->
+        <div class="copyright">
+          My Voyages &#174; 2022 All Rights Reserved.
+        </div>
+        <!-- copyright end -->
+      </div>
+      <!-- col end -->
+    </div>
+    <!-- row end -->
+    <!-- row start -->
+    <div class="row">
+      <!-- col start -->
+      <div class="col-lg-12">
+        <!-- divider start -->
+        <div class="divider-l"></div>
+        <!-- divider end -->
+        <!-- line start -->
+        <div class="the-line"></div>
+        <!-- line end -->
+        <!-- divider start -->
+        <div class="divider-l"></div>
+        <!-- divider end -->
+      </div>
+      <!-- col end -->
+    </div>
+    <!-- row end -->
+  </div>
+  <!-- container end -->
+</div>
+<!-- contact end -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Contact Information Submitted ✅</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="text-align:center;">
+        Thank you for your interest in My Voyages!<br />Your contact information has been successfully submitted.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/public/js/contact.js"></script>
+
+{{/if}}

@@ -1,0 +1,133 @@
+{{> nav-bar nav}}
+
+<!-- container start -->
+<div class="container margin-top ambassador-form-container">
+  <div id="mobile-video" class="form-video">
+    <video class="" playsinline autoplay loop muted>
+      <source src="/public/html5-videos-22/Luxex.mp4" type="video/mp4">
+    </video>
+    <h4 id="mobile-title" class="h4-comments Ambassador">
+      Contact<br />Us
+    </h4>
+  </div>
+  <!-- section subtitle start -->
+  <!-- divider start -->
+  <!-- divider end -->
+  <!-- comment form start -->
+
+  <form class="ambassador-form margin-top" action="#" id="form-3" method="post" name="send">
+    <!-- col start -->
+    <div>
+      <h4 class="questions-ambassador">Enter first and last name</h4>
+      <input class="requiredField-c name" id="name" name="name" placeholder="Name" type="text">
+    </div>
+    <!-- col end -->
+    <!-- col start -->
+    <div>
+      <h4 class="questions-ambassador">Enter email address</h4>
+      <input class="requiredField-c email" id="email-c" name="email" placeholder="Email" type="text">
+    </div>
+    <!-- col end -->
+    <div>
+      <h4 class="questions-ambassador">Enter your phone number</h4>
+      <input class="requiredField-c name" id="phone" name="PHONE" placeholder="Phone Number" type="text">
+    </div>
+    <div>
+      <h4 class="questions-ambassador">Let us know anything else here</h4>
+      <textarea style="height:34px;" class="requiredField-c email" id="how-many" name="how-many" placeholder="Additional info here" type="text">
+      </textarea>
+    </div>
+    <!-- col start -->
+    <button id="contact-submit" class="edit-mode btn margin-auto" type="submit" data-toggle="modal"
+      data-target="#exampleModal">
+      Submit
+    </button>
+  </form>
+  <!-- comment form end -->
+</div>
+<!-- contact end -->
+
+<!-- home end -->
+<!-- vertical lines start -->
+<div class="vertical-lines-wrapper">
+  <div class="vertical-lines"></div>
+</div>
+
+<!-- container start -->
+<div class="container-fluid">
+  <!-- row start -->
+  <div class="row footer-credits">
+    <!-- footer logo start -->
+    <div class="footer-credits-logo">
+      <a href="/contact"><img alt="Logo Footer" src="/public/img/mv-logo-bottom.webp"></a>
+    </div>
+    <!-- footer logo end -->
+    <!-- col start -->
+    <div class="col-lg-12">
+      <!-- social icons start -->
+      <div class="social-icons">
+        <ul>
+          {{!-- class="ion-social-facebook" class="ion-social-instagram" class="ion-social-linkedin"
+          class="tiktok"<iconify-icon icon="cib:tiktok"></iconify-icon>class="typcn:social-facebook"--}}
+          <li>
+            <a target="_blank" href="https://www.facebook.com/profile.php?id=100032894001313">
+            <ion-icon name="logo-facebook"></ion-icon><span>Facebook</span></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.instagram.com/myvoyagesofficial/">
+            <ion-icon name="logo-instagram"></ion-icon><span>Instagram</span></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.linkedin.com/company/myvoyages/">
+            <ion-icon name="logo-linkedin"></ion-icon><span>linkedin</span></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.tiktok.com/@myvoyagesofficial?lang=en">
+            <ion-icon name="logo-tiktok"></ion-icon><span>Tiktok</span></a>
+          </li>
+        </ul>
+      </div>
+      <!-- social icons end -->
+      <!-- divider start -->
+      <div class="divider-l"></div>
+      <!-- divider end -->
+    </div>
+    <!-- col end -->
+    <!-- col start -->
+    <div class="col-lg-12">
+      <!-- copyright start -->
+      <div class="copyright">
+        My Voyages &#174; 2022 All Rights Reserved.
+      </div>
+      <!-- copyright end -->
+    </div>
+    <!-- col end -->
+  </div>
+  <!-- row end -->
+</div>
+<!-- container end -->
+<!-- contact end -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Contact Information Submitted ✅</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="text-align:center;">
+        Thank you for your interest in My Voyages!<br />Your contact information has been successfully submitted.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/public/js/contact.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
+  integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{{> uparrow}}
